@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Form Events</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+       
+        $(document).ready(function(){
+          
+            $("#myForm").submit(function(event){
+                event.preventDefault(); 
+
+   
+                var formData = $(this).serialize();
+                $("#output").text("Form submitted with data: " + formData);
+            });
+
+            $("#name, #email").change(function(){
+                $("#output").text("Input field changed: " + $(this).attr("name") + " - " + $(this).val());
+            });
+        });
+    </script>
+</body>
+</html>

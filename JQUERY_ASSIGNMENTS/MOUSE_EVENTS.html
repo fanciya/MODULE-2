@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Mouse Events</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        div, button, p {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">Hover over me!</div>
+    <button id="myButton">Click me!</button>
+    <p id="myParagraph">Double click me!</p>
+   <script>
+       
+        $(document).ready(function(){
+           
+            $("#myButton").click(function(){
+                alert("Button Clicked!");
+            });
+
+            $("#myParagraph").dblclick(function(){
+                alert("Paragraph Double Clicked!");
+            });
+
+   
+            $("#myDiv").mouseenter(function(){
+                $(this).text("Mouse Entered!");
+            });
+
+            $("#myDiv").mouseleave(function(){
+                $(this).text("Mouse Left!");
+            });
+        });
+    </script>
+</body>
+</html>

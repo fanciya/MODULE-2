@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .merged-cell {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Complex Table Example</h1>
+    <table>
+        <tr>
+            <th rowspan="2">MALAYALAM BOOKS</th>
+            <th colspan="2">ENGLISH BOOKS </th>
+            <th rowspan="2" class="merged-cell">SELF HELPING BOOKS</th>
+        </tr>
+        <tr>
+            <th>ORIGINAL</th>
+            <th>TRANSLATION</th>
+        </tr>
+        <tr>
+            <td>NAALUKETTU</td>
+            <td>THE KITE RUNNER</td>
+            <td>LOVE IN THE TIME OF CHOLERA</td>
+            <td>THE MONK WHO SOLD HIS FERRARI</td>
+        </tr>
+        <tr>
+            <td>RANDAMOOZHAM</td>
+            <td>THOUSAND SPLENDID SUNS</td>
+            <td>THE ALCHEMIST</td>
+            <TD>THE MAGIC OF THINKING BIG</TD>
+        </tr>
+        <tr>
+            <td colspan="1" class="merged-cell">KAALAM</td>
+            <td>ATLAS SHRUGGED</td>
+            <TD>ONE HUNDRED YEARS OF SOLITUDE</TD>
+            <td>THE SECRET</td>
+        </tr>
+    </table>
+</body>
+
+</html>

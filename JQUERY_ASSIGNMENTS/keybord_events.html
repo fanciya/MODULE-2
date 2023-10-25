@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Keyboard Events</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <input type="text" id="myInput">
+
+    <script>
+
+        $(document).ready(function(){
+          
+            $("#myInput").keydown(function(event){
+                console.log("Keydown Event: Key pressed - " + event.key);
+            });
+
+         
+            $("#myInput").keyup(function(event){
+                console.log("Keyup Event: Key released - " + event.key);
+            });
+
+            $("#myInput").keypress(function(event){
+                console.log("Keypress Event: Key pressed - " + String.fromCharCode(event.which));
+            });
+        });
+    </script>
+</body>
+</html>
